@@ -23,6 +23,8 @@
                <fieldset>
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Inviando...">Invio</button>
                </fieldset>
+               <p class="copyright">Developed by <a href="https://github.com/DaniAffCH" target="_blank" title="DaniAffCH">DaniAffCH</a></p>
+               </form>
           </form>
      </div>
 </body>

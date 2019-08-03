@@ -6,6 +6,7 @@ $(function(){
            $.post("inc/chatPost.php", { text: msg, name: usr }, function(data){
                 $(".chatMessages").append(data);
                 $('#msg').val("");
+                $(".chatMessages").stop().animate({ scrollTop: $(".chatMessages")[0].scrollHeight}, 1000);
           });
      });
 
