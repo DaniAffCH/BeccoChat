@@ -4,7 +4,6 @@
 <link rel="stylesheet" type="text/css" href="static/css/chat.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="static/js/chat.js"></script>
 <?php
      session_start();
      if (!isset($_SESSION['auth'])) {
@@ -15,6 +14,7 @@
           $_SESSION['name'] = strip_tags(stripslashes($_POST["nome"]));
      }
 ?>
+<script src="static/js/chat.js"></script>
 </head>
 
 <body>

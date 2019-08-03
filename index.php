@@ -8,7 +8,7 @@ integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
 crossorigin="anonymous"></script>
 
 <?php
-     require_once "connection.php";
+     require_once "inc/connection.php";
      $db = new DB;
      $getValue = trim(
           strtolower(
