@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+     font-family: "Roboto", Helvetica, Arial, sans-serif;
+     font-weight: 100;
+     font-size: 12px;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+     -o-font-smoothing: antialiased;
+     font-smoothing: antialiased;
+     text-rendering: optimizeLegibility;
+}
+
+body {
+     line-height: 30px;
+     color: #777;
+     background: #4CAF50;
+}
+
+.chatContainer{
+     max-width: 400px;
+     max-height: 510px;
+     width: 100%;
+     height: 100%;
+     border: 2px solid #ddd;
+     margin: 0 auto;
+     position: relative;
+}
+
+.chatContainer > .chatHeader{
+     width: 100%;
+     background: #9bca9e;
+     padding: 5px;
+     border-bottom: 3px solid #ddd;
+}
+
+.chatContainer > .chatHeader h3{
+     margin: 0;
+     padding: 0;
+     font-weight: 400;
+     color: #333;
+}
+
+.chatContainer > .chatMessages{
+     height: 420px;
+     border-bottom: 1px solid #dddd;
+     overflow-y: scroll;
+     background: #9bca9e;
+}
+
+.chatContainer > .chatBottom form input[type="submit"]{
+     padding: 6px;
+     background: white;
+     border: 1px solid #ddd;
+     cursor: pointer;
+}
+
+.chatContainer > .chatBottom form input[type="text"]{
+     width: 85%;
+     padding: 3px;
+     padding-left: 10px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     margin: 5px;
+     height: 28px;
+}
+
+@media only screen and (max-width: 700px) {
+     .chatContainer > .chatBottom form input[type="submit"]{
+          padding: 6px;
+          background: white;
+          border: 1px solid #ddd;
+          cursor: pointer;
+     }
+
+     .chatContainer > .chatBottom form input[type="text"]{
+          width: 75%;
+          padding: 3px;
+          padding-left: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          margin: 5px;
+          height: 28px;
+     }
+}
+
+.cm{
+     list-style: none;
+     border-bottom: 1px solid #ddd;
+     padding: 5px
+}
