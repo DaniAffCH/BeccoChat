@@ -5,12 +5,13 @@
          die;
      }
      require_once "connection.php";
+     require_once "encryptDecrypt.php";
      $db = new DB;
      if ($_SERVER['REQUEST_METHOD'] === 'POST' and isset($_POST['text'])) {
           $msg = strip_tags(stripslashes($_POST["text"]));
           $data = [
-               'name' => $_SESSION['name'],
-               'msg' => $msg
+               'name' => encrypt($_SESSION['name']),
+               'msg' => encrypt($msg)
           ];
           $query = "INSERT INTO Logs (Name, Message) VALUES (:name, :msg)";
           $db->select($query, $data);

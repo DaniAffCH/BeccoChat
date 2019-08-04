@@ -6,6 +6,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="static/js/chat.js"></script>
 <?php
+     require_once "inc/dailyDelete.php";
      session_start();
      if (!isset($_SESSION['auth'])) {
          header("location:index.php");
@@ -38,6 +39,9 @@
                     <input type="hidden" id="name" name="name" value="<?php echo($_SESSION['name']);?>">
                     <input type="text" name="msg" id="msg" placeholder="Inserisci il mesaggio">
                     <input type="submit" name="submit" value="Invio">
+               </form>
+               <form action="inc/delete.php" method="post">
+                    <button name="delete" class="delete" onclick="deleteMyMessages()">Cancella i miei messaggi</button>
                </form>
           </div>
      </div>

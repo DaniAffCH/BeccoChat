@@ -8,23 +8,27 @@ integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
 crossorigin="anonymous"></script>
 
 <?php
+     require_once "inc/dailyDelete.php";
      require_once "inc/connection.php";
      $db = new DB;
+     session_start();
+     if($_SESSION['auth']){
+          header("location:home.php");
+     }
      $getValue = trim(
           strtolower(
           strip_tags(
           stripslashes($_GET["key"]))));
+
      if($getValue){
           $data = [
-               'value' => $getValue
+               'value' => hash("sha256",$getValue)
           ];
           $query = "SELECT * FROM `EnterKey` WHERE chiave = :value";
           $logged = ($db->select($query, $data)) ? true : false;
           if(!$logged){
-               echo("<script> alert('Chiave errata!'); </script>");
                header("location:index.php");
           }else{
-               session_start();
                $_SESSION['auth'] = true;
                header("location:home.php");
           }
