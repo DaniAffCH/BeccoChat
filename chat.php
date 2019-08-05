@@ -24,6 +24,7 @@
      $(window).on("load", function() {
           var loading = $(".loading");
           loading.delay(loading.attr("delay-hide")).slideUp();
+          $(".chatMessages").stop().animate({ scrollTop: $(".chatMessages")[0].scrollHeight}, 1000);
      });
 </script>
 </head>

@@ -11,7 +11,7 @@
      $res = $db->select($query);
      $counter = 0;
      foreach ($res as $msg) {
-          echo(sprintf("<font style = 'color: #000000;'><li class='cm' align='left'><font style = 'color: #D9534F;'> %s </font></b> - %s </li></font>", ucwords(decrypt($msg["Name"])), decrypt($msg["Message"])));
+          echo(sprintf("<li class='cm' align='left'><font style = 'color: #D9534F;'> %s </font><font style = 'color: #000000;'> - %s </font><small><font style = 'float:right'> %s </font></small></li>", ucwords(decrypt($msg["Name"])), decrypt($msg["Message"]), substr($msg["Timestamp"],11,5)));
           $counter++;
      }
      if($counter-$_SESSION['nMsg'] > 0){
