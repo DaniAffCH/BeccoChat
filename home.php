@@ -19,7 +19,7 @@
                <h3>BeccoChat</h3>
                <h4>Scegli un username</h4>
                <fieldset>
-                    <input name = "nome" placeholder="Username" type="text" tabindex="1" required autofocus>
+                    <input name = "nome" placeholder="Username" type="text" tabindex="1" autocomplete="off" required autofocus>
                </fieldset>
                <fieldset>
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Inviando...">Invio</button>
