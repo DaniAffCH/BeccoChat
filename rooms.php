@@ -61,19 +61,22 @@
                               }
                          }
                          if($room["Capacity"] <= $onlineUsers){
-                              echo(sprintf('<button name = "room" value = %d disabled>
+                              echo(sprintf('<button name = "room" id="button%d" value = %d disabled>
                                         %s [<a id = "%d"><font color = "black">%d</font></a>/%d]
                                         <i class="fa fa-arrow-right">
                                         </i>
-                                   </button>', $room["ID"], $room["Name"], $room["ID"], $onlineUsers, $room["Capacity"]));
+                                   </button>', $room["ID"], $room["ID"], $room["Name"], $room["ID"], $onlineUsers, $room["Capacity"]));
+                              echo (sprintf('<input type="hidden" id="capacity%d" value="%d">', $room["ID"], $room["Capacity"]));
                          }
 
                          else{
-                              echo(sprintf('<button name = "room" value = %d>
+                              echo(sprintf('<button name = "room" id="button%d" value = %d>
                                         %s [<a id = "%d"><font color = "black">%d</font></a>/%d]
                                         <i class="fa fa-arrow-right">
                                         </i>
-                                   </button>', $room["ID"], $room["Name"], $room["ID"], $onlineUsers, $room["Capacity"]));
+                                   </button>', $room["ID"], $room["ID"], $room["Name"], $room["ID"], $onlineUsers, $room["Capacity"]));
+
+                              echo (sprintf('<input type="hidden" id="capacity%d" value="%d">', $room["ID"], $room["Capacity"]));
                          }
                     }
                 ?>
