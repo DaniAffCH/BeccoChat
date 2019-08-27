@@ -15,7 +15,7 @@
 
 <body>
      <div class="container">
-          <form id="contact" action="chat.php" method="post">
+          <form id="contact" action="rooms.php" method="post">
                <h3>BeccoChat</h3>
                <h4>Scegli un username</h4>
                <fieldset>

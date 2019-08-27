@@ -1,9 +1,6 @@
 <?php
      require_once "connection.php";
      $db = new DB;
-     $data = [
-
-     ];
      $expire = "04:20:00";
      $data = [
           "expire" => $expire

@@ -7,10 +7,14 @@
      require_once "connection.php";
      require_once "encryptDecrypt.php";
      $db = new DB;
-     $query = "SELECT * FROM Logs ORDER BY ID";
-     $res = $db->select($query);
+     $data = [
+          'room' => $_SESSION['room']
+     ];
+     $query = "SELECT l.Message as Message, u.Name as Name, l.Timestamp as Timestamp FROM Logs as l INNER JOIN User as u ON l.UserID = u.ID WHERE l.RoomID = :room ORDER BY l.ID";
+     $res = $db->select($query, $data);
      $counter = 0;
      foreach ($res as $msg) {
+
           echo(sprintf("<li class='cm' align='left'><font style = 'color: #D9534F;'> %s </font><font style = 'color: #000000;'> - %s </font><small><font style = 'float:right'> %s </font></small></li>", ucwords(decrypt($msg["Name"])), decrypt($msg["Message"]), substr($msg["Timestamp"],11,5)));
           $counter++;
      }
