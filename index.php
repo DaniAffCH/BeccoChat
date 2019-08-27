@@ -7,7 +7,13 @@ src="https://code.jquery.com/jquery-3.4.1.slim.js"
 integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
 crossorigin="anonymous"></script>
 
+<title>BeccoChat</title>
+
+<meta name="description" content="Una chat completamente anonima e criptata senza registrazione!">
+<meta name="keywords" content="chat,anonimo,anonimato,messaggi,
+Becco,Becchime,BeccoChat,criptato">
 <?php
+/*
      require_once "inc/dailyDelete.php";
      require_once "inc/connection.php";
      $db = new DB;
@@ -33,10 +39,13 @@ crossorigin="anonymous"></script>
                header("location:home.php");
           }
      }
+     */
+     session_start();
+     $_SESSION['auth'] = true;
+     header("location:home.php");
 ?>
-
 </head>
-
+<!--
 <body>
 <script>
 
@@ -59,3 +68,4 @@ if(!getValue || getValue === null){
 </script>
 </body>
 </html>
+-->
