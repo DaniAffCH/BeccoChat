@@ -16,6 +16,12 @@ Becco,Becchime,BeccoChat,criptato">
          header("location:index.php");
          die;
      }
+     if($_SERVER['REQUEST_METHOD'] === 'GET' and $_GET['code'] == 'error'){
+          echo("<script>alert('Il nome è gia utilizzato e non potrà essere utilizzato nuovamente fino a domani!')</script>");
+     }
+     if(isset($_SESSION['name'])){
+          header("location:rooms.php");
+     }
 ?>
 </head>
 

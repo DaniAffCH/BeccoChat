@@ -7,4 +7,6 @@
      ];
      $query = "DELETE FROM Logs WHERE DAY( TIMESTAMP ) < DAY( CURRENT_DATE() ) AND CURRENT_TIME( ) > :expire";
      $db->select($query, $data);
+     $query = "DELETE FROM User WHERE DAY( LastActivity ) < DAY( CURRENT_DATE() ) AND CURRENT_TIME( ) > :expire";
+     $db->select($query, $data);
 ?>

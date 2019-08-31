@@ -52,7 +52,7 @@ body {
 
 a{text-decoration:none; color:#ffff;}
 
-#contact button{
+.roombtn{
      font-family: "Roboto", Helvetica, Arial, sans-serif;
      font-size: 18px;
      padding: 20px;
@@ -61,4 +61,20 @@ a{text-decoration:none; color:#ffff;}
 
 .fa{
      float: right;
+     margin-left: 5px;
+}
+
+.btn {
+     margin-top: 8px;
+     background-color: DodgerBlue;
+     border: none;
+     color: white;
+     padding: 10px 15px;
+     font-size: 16px;
+     cursor: pointer;
+     border-radius: 8px;
+}
+
+.btn:hover {
+     background-color: RoyalBlue;
 }
