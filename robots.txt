@@ -1,0 +1,6 @@
+User-agent: Googlebot
+Disallow: inc/
+
+# Group 2
+User-agent: *
+Allow: /

@@ -16,6 +16,7 @@
      require_once "inc/encryptDecrypt.php";
      session_start();
      $db = new DB;
+
      if (!isset($_SESSION['auth'])) {
          header("location:index.php");
          die;

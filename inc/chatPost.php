@@ -18,7 +18,6 @@
                $utente = $db->select($query, $data);
                return $utente[0]["ID"];
           }
-
           $msg = strip_tags(stripslashes($_POST["text"]));
           $data = [
                'usrID' => getUserIdByName($_SESSION['name']),

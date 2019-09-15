@@ -4,7 +4,6 @@
 <link rel="stylesheet" type="text/css" href="static/css/form.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BeccoChat</title>
-
 <meta name="description" content="Una chat completamente anonima e criptata senza registrazione!">
 <meta name="keywords" content="chat,anonimo,anonimato,messaggi,
 Becco,Becchime,BeccoChat,criptato">
